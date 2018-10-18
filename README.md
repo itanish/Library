@@ -1,1 +1,1 @@
-"# Library for stiring all the projects" 
+"# Library for storing all the projects" 
