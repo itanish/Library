@@ -68,8 +68,12 @@ WSGI_APPLICATION = 'library_project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'mysql.connector.django',
+        'NAME': 'library',
+        'USER' : 'kunj',
+        'PASSWORD': 'kunj@123',
+        'HOST': 'localhost',
+        'PORT': '3306',
     }
 }
 
