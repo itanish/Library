@@ -1,0 +1,117 @@
+{% extends "index/base.html" %}
+{% load static %}
+{% block content %}
+  <!-- banner -->
+    <div class="banner">
+      <div class="container">
+        <section class="slider">
+          <div class="flexslider">
+            <ul class="slides">
+              <li>
+                <div class="banner_info">
+                  <h3>Project Library</h3>
+                  <p>Find the most intuitive projects of the department.</p>
+                </div>
+              </li>
+              <li>
+                <div class="banner_info">
+                  <h3>Mentors</h3>
+                  <p>The most supportive mentors.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <!-- flexSlider -->
+          <script defer src="{% static 'js/jquery.flexslider.js' %}"></script>
+          <script type="text/javascript">
+            $(window).load(function(){
+              $('.flexslider').flexslider({
+              animation: "slide",
+              start: function(slider){
+                $('body').removeClass('loading');
+              }
+              });
+            });
+          </script>
+        <!-- //flexSlider -->
+      </div>
+    </div>
+  <!-- //banner -->
+  <!-- tabs -->
+  <div class="tabs">
+      <div class="tabs-left">
+        <div class="col-xs-2 tab-grid-left"> <!-- required for floating -->
+          <!-- Nav tabs -->
+           <ul class="nav nav-tabs">
+            <li class="active"><a href="#Tab1" data-toggle="tab" aria-expanded="false">Innovation</a></li>
+            <li class=""><a href="#Tab2" data-toggle="tab" aria-expanded="false">Ideas</a></li>
+            <li class=""><a href="#Tab3" data-toggle="tab" aria-expanded="false">Creativity</a></li>
+            <li class=""><a href="#Tab4" data-toggle="tab" aria-expanded="false">Problem Solving</a></li>
+            <li class=""><a href="#Tab5" data-toggle="tab" aria-expanded="true">Inspiration</a></li>
+          </ul>
+        </div>
+        <div class="col-xs-10 tab-grid-right">
+          <!-- Tab panes -->
+          <div class="tab-content">
+            <div class="tab-pane active" id="Tab1">
+              <div class="col-md-6 w3-text">
+                <h3>Innovation</h3>
+                <p>Every once in a while, a new technology, an old problem, and a big idea turn into an innovation.</p>
+              </div>
+              <div class="col-md-6 w3-imga">
+                <img src="{% static 'images/innovation.jpg' %}" class="img-responsive" alt="">
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="tab-pane" id="Tab2">
+              <div class="col-md-6 w3-imga">
+                <img src="{% static 'images/ideas.jpg' %}" class="img-responsive" alt="">
+              </div>
+              <div class="col-md-6 w3-text">
+                <h3>Ideas</h3>
+                <p>
+                  Great minds discuss ideas;
+                  average minds discuss events;
+                  small minds discuss people.
+                </p>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="tab-pane" id="Tab3">
+              <div class="col-md-6 w3-text">
+                <h3>Creativity</h3>
+                <p>Without change there is no innovation, creativity, or incentive for improvement. Those who initiate change will have a better opportunity to manage the change that is inevitable.</p>
+              </div>
+              <div class="col-md-6 w3-imga">
+                <img src="{% static 'images/creativity.jpg' %}" class="img-responsive" alt="">
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="tab-pane" id="Tab4">
+              <div class="col-md-6 w3-imga">
+                <img src="{% static 'images/problem-solving.jpg' %}" class="img-responsive" alt="">
+              </div>
+              <div class="col-md-6 w3-text">
+                <h3>Problem Solving</h3>
+                <p>After every storm the sun will smile; for every problem there is a solution, and the soul's indefeasible duty is to be of good cheer.</p>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="tab-pane" id="Tab5">
+              <div class="col-md-6 w3-text">
+                <h3>Inspiration</h3>
+                <p>Believe in yourself! Have faith in your abilities! Without a humble but reasonable confidence in your own powers you cannot be successful or happy.</p>
+              </div>
+              <div class="col-md-6 w3-imga">
+                <img src="{% static 'images/Inspiration.jpg' %}" class="img-responsive" alt="">
+              </div>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix"> </div>
+      </div>
+  </div>
+  <!-- //tabs -->
+{% endblock content %}

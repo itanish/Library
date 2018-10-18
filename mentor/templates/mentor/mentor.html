@@ -1,0 +1,47 @@
+{% extends "index/base.html" %}
+{% load static %}
+
+{% block content %}
+
+  <link rel="stylesheet" href="{% static 'css/base.css' %}">
+  <script src="{% static 'js/modernizr.min.js' %}"></script>
+  <script src="{% static 'js/jquery.fitvids.js' %}"></script>
+  <script src="{% static 'js/script.js' %}"></script>
+  <div class="banner1">
+
+  </div>
+    <!-- gallery -->
+    <div class="w3l-gallery">
+      <div class="container" style="">
+        <div class="galley-grid">
+          <h3 class="agile">Mentors</h3>
+          <span class="lft-bar-gallery"> </span>
+          <span class="rit-bar-gallery"> </span>
+        </div>
+        {% for mentor in mentors %}
+          <div class="w3ls-top">
+          <div class="col-md-4 project">
+            <div class="projectThumbnail">
+              <div class="projectThumbnailHover projcet-ro">
+                <h4>{{ mentor.name }}</h4>
+                <h5>{{ mentor.email }}</h5>
+              </div>
+                <img src="{% static mentor.image_link }} %}" alt="" class="img-responsive thumbnailImage" width="340" height="150">
+              </div>
+              <div class="projectInfo">
+                <div class="projectNavClose">
+                  <button class="closeButton"><img src="{% static 'images/cross.png' %}" alt=""></button>
+                </div>
+                <div class="clearfix"> </div>
+                <h4>{{ mentor.name }}</h4>
+                <h4>{{ mentor.get_department_display }}</h4>
+                <p>{{ mentor.email }}</p>
+
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+    <!-- //gallery -->
+{% endblock content %}
